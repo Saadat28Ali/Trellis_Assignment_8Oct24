@@ -1,10 +1,5 @@
-"use client";
-
-// React imports
-import { useEffect } from "react";
-
 // Next imports
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 // Asset imports
 import doubleQuotes from "../../public/icons/doublequote.png";
@@ -24,11 +19,11 @@ export default function TestimonialCard(
         designation?: string, 
         stars?: number, 
         reviewPara: string, 
-        image: any
+        image: StaticImageData
     }
 ) {
 
-    let starsArray: Array<any> = []
+    const starsArray: Array<StaticImageData> = []
 
     if (stars !== undefined) {
         for (let index=0; index<5; index++) {

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export default function BlogItem(
     {
@@ -10,7 +10,7 @@ export default function BlogItem(
         description
     }: 
     {
-        image: any, 
+        image: StaticImageData, 
         date?: string, 
         category?: string, 
         author?: string,

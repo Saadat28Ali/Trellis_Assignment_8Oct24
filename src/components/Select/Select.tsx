@@ -5,7 +5,7 @@ export default function Select(
     }:
     {
         placeholder: string, 
-        options: Array<any>
+        options: Array<string>
     }
 ) {
     return (

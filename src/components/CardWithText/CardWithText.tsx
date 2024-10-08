@@ -1,5 +1,5 @@
 // Next imports
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export default function CardWithText(
     {
@@ -9,7 +9,7 @@ export default function CardWithText(
         paragraph
     }:
     {
-        icon?: any, 
+        icon?: StaticImageData, 
         altText: string, 
         title: string, 
         paragraph: string
@@ -28,7 +28,11 @@ export default function CardWithText(
         text-center
         my-5
         ">
-            <Image src={icon} alt={altText} />
+            {
+                (icon !== undefined) ? (
+                    (<Image src={icon} alt={altText} />)
+                ) : <></>
+            }
             
             <h2 className="
             font-bold

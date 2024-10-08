@@ -1,5 +1,5 @@
 // Next imports
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export default function PhotoCard(
     {
@@ -9,7 +9,7 @@ export default function PhotoCard(
         designation
     }: 
     {
-        image: any, 
+        image: StaticImageData, 
         altText: string
         name: string, 
         designation: string, 
