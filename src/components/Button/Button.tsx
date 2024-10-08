@@ -11,10 +11,10 @@ export default function Button({
         <button className="
         Button
         bg-mainAmber
-        px-20
-        py-6
-        my-10
-        text-2xl
+        px-16
+        py-8
+        my-20
+        text-3xl
         text-white
         " onClick={(event) => {
             (callback !== undefined) ? callback(event) : {}

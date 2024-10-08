@@ -20,7 +20,6 @@ export default function Select(
         px-2
         placeholder:text-white
         w-6/12
-        
         ">
             <option 
             className="Select_Option"

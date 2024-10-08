@@ -20,10 +20,33 @@ import trimmerIcon from "../public/icons/trimmer.png";
 
 // Team
 import team1 from "../public/images/team/team_1.png";
-import team2 from "../public/images/team/team_2.png";
-import team3 from "../public/images/team/team_3.png";
-import team4 from "../public/images/team/team_4.png";
-import team5 from "../public/images/team/team_5.png";
+import team2 from "../public/images/team/team_2.jpeg";
+import team3 from "../public/images/team/team_3.jpeg";
+import team4 from "../public/images/team/team_4.jpeg";
+import team5 from "../public/images/team/team_5.jpeg";
+
+// Testimonials
+import testimonial_1 from "../public/images/testimonials/testimonial_1.jpeg";
+import testimonial_2 from "../public/images/testimonials/testimonial_2.png";
+
+// Blog
+import blog_1 from "../public/images/blog/blog_1.jpeg";
+import blog_2 from "../public/images/blog/blog_2.jpeg";
+import blog_3 from "../public/images/blog/blog_3.jpeg";
+
+// Clients
+import client_1 from "../public/images/clients/client_1.jpeg";
+import client_2 from "../public/images/clients/client_2.jpeg";
+import client_3 from "../public/images/clients/client_3.jpeg";
+import client_4 from "../public/images/clients/client_4.jpeg";
+
+// Examples 
+import example_1 from "../public/images/examples/example_1.jpeg";
+import example_2 from "../public/images/examples/example_2.jpeg";
+import example_3 from "../public/images/examples/example_3.jpeg";
+import example_4 from "../public/images/examples/example_4.jpeg";
+import example_5 from "../public/images/examples/example_5.jpeg";
+import example_6 from "../public/images/examples/example_6.png";
 
 // ----------------------------------------------------------------
 
@@ -35,6 +58,9 @@ import TextInput from "@/components/TextInput/TextInput";
 import Select from "@/components/Select/Select";
 import QuickStat from "@/components/QuickStat/QuickStat";
 import PhotoCard from "@/components/PhotoCard/PhotoCard";
+import TestimonialCard from "@/components/TestimonialCard/TestimonialCard";
+import PricePlanItem from "@/components/PricePlanItem/PricePlanItem";
+import BlogItem from "@/components/BlogItem/BlogItem";
 
 export default function Home() {
 
@@ -45,6 +71,7 @@ export default function Home() {
     text-white
     font-Roboto
     flex-col
+    overflow-x-clip
     ">
 
       {/* Landing */}
@@ -135,6 +162,7 @@ export default function Home() {
             my-8
             mx-16
             xl:mx-0
+            text-center
             "> Our Hairstyle Enhances Your Smile!! </h1>
 
             <p className="
@@ -142,6 +170,7 @@ export default function Home() {
             text-3xl
             mx-16
             md:mx-64
+            text-center
             ">
               Our barbershop is the territory created purely 
               for males who appreciate premium quality, time 
@@ -149,16 +178,6 @@ export default function Home() {
             </p>
 
             <Button text="MAKE AN APPOINTMENT"/>
-            {/* <button className="
-            Landing_Appointment_Button
-            bg-mainAmber
-            px-20
-            py-6
-            my-20
-            text-2xl
-            ">
-              MAKE AN APPOINTMENT
-            </button> */}
           </div>
         </div>
       </div>
@@ -226,17 +245,6 @@ export default function Home() {
               </p>
 
               <Button text="MORE ABOUT US" />
-              {/* <button className="
-              Brief_Aboutus_More_Button
-              bg-mainAmber
-              px-20
-              py-6
-              my-10
-              text-2xl
-              text-white
-              ">
-                MORE ABOUT US
-              </button> */}
 
             </div>
             
@@ -400,7 +408,6 @@ export default function Home() {
           "
           />
         </div>
-      
       </div>
       
       {/* Contact Form */}
@@ -457,7 +464,7 @@ export default function Home() {
           Contact_Form_Right
           bg-[url('../public/images/contact_form/worldmap.png')]
           bg-cover
-          md:w-7/12
+          md:w-9/12
           min-h-[769px]
           ">
             <div className="
@@ -473,12 +480,14 @@ export default function Home() {
               font-PoppinsSemiBold
               text-5xl
               my-5
+              text-center
               "> Make an Appointment </h2>
 
               <p className="
               text-white
               font-roboto
               text-3xl
+              text-center
 
               mb-20
               ">
@@ -488,6 +497,9 @@ export default function Home() {
 
               <form className="
               Appointment_Form
+              flex
+              flex-col
+              items-center
               ">
                 <div className="
                 Appointment_Form_Row
@@ -511,11 +523,13 @@ export default function Home() {
                 Appointment_Form_Row
                 gap-5
                 my-5
+                w-full
                 ">
                   <Select placeholder="Services" options={[]} />
                   <Select placeholder="Choose Barber" options={[]} />
                 </div>
 
+                <Button text="MAKE AN APPOINTMENT" />
               </form>
             </div>
           </div>
@@ -542,12 +556,15 @@ export default function Home() {
         <QuickStat heading="35" subheading="BRANCHES" />
       </div>
 
+      {/* Team */}
       <div className="
       Team
       flex-col
       items-center
       w-screen
       min-h-screen
+
+      py-20
       ">
         <SectionHeader preheading="SPECIALISTS" heading="Our Team" />
         
@@ -557,6 +574,7 @@ export default function Home() {
         overflow-x-scroll
         justify-start
         bg-neutral-100
+        scroll-smooth
         my-10
         ">
 
@@ -567,29 +585,414 @@ export default function Home() {
           designation="Hair Cut Specialist"/>
 
           <PhotoCard 
-          image={team1} 
-          altText="David_image"
-          name="DAVID" 
+          image={team2} 
+          altText="Paul_image"
+          name="PAUL" 
+          designation="Beard & Trimming"/>
+
+          <PhotoCard 
+          image={team3} 
+          altText="Charlie_image"
+          name="CHARLIE" 
+          designation="Hair Color Specialist"/>
+
+          <PhotoCard 
+          image={team4} 
+          altText="Adam_image"
+          name="ADAM" 
           designation="Hair Cut Specialist"/>
 
           <PhotoCard 
-          image={team1} 
-          altText="David_image"
-          name="DAVID" 
-          designation="Hair Cut Specialist"/>
+          image={team5} 
+          altText="Tristan_image"
+          name="TRISTAN" 
+          designation="Beard & Trimming"/>
 
-          <PhotoCard 
-          image={team1} 
-          altText="David_image"
-          name="DAVID" 
-          designation="Hair Cut Specialist"/>
+        </div>
+      </div>
 
-          <PhotoCard 
-          image={team1} 
-          altText="David_image"
-          name="DAVID" 
-          designation="Hair Cut Specialist"/>
+      {/* Testimonials */}
+      <div className="
+      Testimonials
+      bg-[url('../public/images/testimonials/testimonialsbg.jpeg')]
+      bg-cover
+      min-h-[1013px]
+      w-screen
+      ">
+        <div className="
+        Testimonial_Black_Backdrop
+        bg-black
+        bg-opacity-70
+        w-screen
+        min-h-[inherit]
+        flex-col
+        py-10
+        ">
+          <SectionHeader 
+          preheading="TESTIMONIALS" 
+          heading="Hear From Our Customers" 
+          darkBg
+          />
+          
+          <div className="
+          Testimonial_Display
+          justify-evenly
+          flex-col
+          lg:flex-row
+          gap-5
+          mt-20
+          ">
+            <TestimonialCard 
+            name="Robert Fox"
+            designation="Writer"
+            stars={4}
+            reviewPara="Just came back to home and 
+            should say that it is definitely a great 
+            experience. I would recommend it for 
+            everyone who needs a bike for a short 
+            term or want to to"
+            image={testimonial_1}
+            />
 
+            <TestimonialCard 
+            name="Marvin McKinney"
+            designation="Businessman"
+            stars={5}
+            reviewPara="Amazing service! Claire 
+            helped me to reduce the shipping price a 
+            little and shipped it immediately after 
+            purchasing. The amethyst cave I got is a 
+            beauty and I c..."
+            image={testimonial_2}
+            />
+
+          </div>
+        </div>
+        
+      </div>
+
+      {/* Price Plan */}
+      <div className="
+      PricePlan
+      w-screen
+      min-h-[994px]
+      bg-lightAmber
+      text-fadedBlack
+      flex-col
+      py-20
+      ">
+        <SectionHeader
+        preheading=""
+        heading="Barbershop Pricing Plan" />
+
+        <div className="
+        flex-col
+        lg:flex-row
+        justify-evenly
+        w-screen
+        ">
+          <div className="
+          PricePlan_Left
+          flex-col
+          w-5/12
+          justify-start
+          ">
+
+            <PricePlanItem
+            heading="Hair Cut"
+            price={10}
+            description="Amet minim mollit non deserunt 
+            ullamco est sit aliqua dolor do amet sint."
+            />
+
+            <PricePlanItem
+            heading="Hair Styling"
+            price={25}
+            description="Amet minim mollit non deserunt 
+            ullamco est sit aliqua dolor do amet sint."
+            />
+
+            <PricePlanItem
+            heading="Hair Trimming"
+            price={30}
+            description="Amet minim mollit non deserunt 
+            ullamco est sit aliqua dolor do amet sint."
+            />
+
+            <PricePlanItem
+            heading="Kids Hair Cut"
+            price={15}
+            description="Amet minim mollit non deserunt 
+            ullamco est sit aliqua dolor do amet sint."
+            />
+
+          </div>
+
+          <div className="
+          PricePlan_Right
+          flex-col
+          w-5/12
+          justify-start
+          ">
+
+            <PricePlanItem
+            heading="Shaving"
+            price={40}
+            description="Amet minim mollit non deserunt 
+            ullamco est sit aliqua dolor do amet sint."
+            />
+
+            <PricePlanItem
+            heading="Beard Trimming"
+            price={25}
+            description="Amet minim mollit non deserunt 
+            ullamco est sit aliqua dolor do amet sint."
+            />
+
+            <PricePlanItem
+            heading="Face Cleaning"
+            price={60}
+            description="Amet minim mollit non deserunt 
+            ullamco est sit aliqua dolor do amet sint."
+            />
+
+            <PricePlanItem
+            heading="Hair Cut"
+            price={12}
+            description="Amet minim mollit non deserunt 
+            ullamco est sit aliqua dolor do amet sint."
+            />
+
+          </div>
+        </div>
+
+        <button className="
+        bg-altAmber
+        p-7
+        rounded-2xl
+        text-white
+        font-Roboto
+        text-2xl
+        mt-10
+        ">
+          VIEW MORE
+        </button>
+      </div>
+
+      {/* Appointment */}
+      <div className="
+      Appointment
+      bg-[url('../public/images/appointment/appointmentbg.jpeg')]
+      w-screen
+      min-h-[761px]
+      bg-cover
+      ">
+        
+        <div className="
+        bg-black
+        bg-opacity-30
+        w-screen
+        min-h-[inherit]
+        flex-col
+        py-10
+        ">
+          
+          <p className="
+          font-Roboto
+          text-4xl
+          text-mainAmber
+          my-10
+          "> BEST BARBERSHOP IN THE CITY  </p>
+          
+          <h1 className="
+          font-Prata
+          text-8xl
+          text-center
+          my-10
+          w-10/12
+          leading-snug
+          "> Making You Look Good Is In Our Heritage. </h1>
+          
+          <p className="
+          font-Poppins
+          text-4xl
+          w-10/12
+          text-center
+          my-10
+          "> 
+            Barber is a person whose occupation is 
+            mainly to cut dress groome style and 
+            shave men’s and boy’s hair 
+          </p>
+
+          <Button text="MAKE AN APPOINTMENT" />
+
+        </div>
+
+      </div>
+
+      {/* Blog */}
+      <div className="
+      Blog
+      flex-col
+      py-20
+      ">
+        <SectionHeader 
+        preheading="News From Blog" 
+        heading="What's On Our Mind"
+        />
+
+        <div className="
+        flex-row
+        justify-evenly
+        flex-wrap
+        ">
+
+          <BlogItem 
+          image={blog_1}
+          date="Mar 20"
+          category="Beard Styles"
+          author="Admin"
+          title="The Best Barbershop In The Town"
+          description="
+          Amet minim mollit non deserunt ullamco 
+          est sit aliqua dolor do amet sint. 
+          Velit officia consequat duis enim velit 
+          mollit. 
+          "
+          />
+
+          <BlogItem 
+          image={blog_2}
+          date="Apr 25"
+          category="Beard Styles"
+          author="Admin"
+          title="The Best Barbershop In The Town"
+          description="
+          Amet minim mollit non deserunt ullamco 
+          est sit aliqua dolor do amet sint. 
+          Velit officia consequat duis enim velit 
+          mollit. 
+          "
+          />
+
+          <BlogItem 
+          image={blog_3}
+          date="Jun 12"
+          category="Beard Styles"
+          author="Admin"
+          title="The Best Barbershop In The Town"
+          description="
+          Amet minim mollit non deserunt ullamco 
+          est sit aliqua dolor do amet sint. 
+          Velit officia consequat duis enim velit 
+          mollit. 
+          "
+          />
+
+        </div>
+      </div>
+
+      {/* Clients */}
+      <div className="
+      Clients
+      justify-evenly
+      w-screen
+      py-10
+      flex-col
+
+      ">
+        <SectionHeader preheading="" heading="Our Clients" />
+
+        <div className="
+        flex-wrap
+        gap-2
+        w-screen
+        justify-evenly
+        ">
+          <Image src={client_1} alt={"client1"} 
+          width={400} height={400}
+          />
+          <Image src={client_2} alt={"client2"} 
+          width={400} height={400}
+          />
+          <Image src={client_3} alt={"client3"} 
+          width={400} height={400}
+          />
+          <Image src={client_4} alt={"client4"} 
+          width={400} height={400}
+          />
+        </div>
+      </div>
+
+      {/* Examples */}
+      <div className="
+      Examples
+      py-10
+      flex-col
+      ">
+        <SectionHeader preheading="" heading="Our Work" />
+
+        <div className="
+        ExamplesDisplay
+        flex-wrap
+        gap-10
+        p-10
+        ">
+
+          <Image src={example_1} alt="example1"
+          style={{
+            width: "25em", 
+            height: "25em", 
+            objectFit: "cover", 
+            margin: "1vw"
+          }}
+          />
+
+          <Image src={example_2} alt="example1"
+          style={{
+            width: "25em", 
+            height: "25em", 
+            objectFit: "cover", 
+            margin: "1vw"
+          }}
+          />
+
+          <Image src={example_3} alt="example1"
+          style={{
+            width: "25em", 
+            height: "25em", 
+            objectFit: "cover", 
+            margin: "1vw"
+          }}
+          />
+
+          <Image src={example_4} alt="example1"
+          style={{
+            width: "25em", 
+            height: "25em", 
+            objectFit: "cover", 
+            margin: "1vw"
+          }}
+          />
+
+          <Image src={example_5} alt="example1"
+          style={{
+            width: "25em", 
+            height: "25em", 
+            objectFit: "cover", 
+            margin: "1vw"
+          }}
+          />
+
+          <Image src={example_6} alt="example1"
+          style={{
+            width: "25em", 
+            height: "25em", 
+            objectFit: "cover", 
+            margin: "1vw"
+          }}
+          />
         </div>
       </div>
     </div>

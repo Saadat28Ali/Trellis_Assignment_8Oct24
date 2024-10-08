@@ -29,10 +29,10 @@ export default function SectionHeader(
             <p
             className="
             text-mainAmber
-            text-2xl
+            text-4xl
             font-Roboto
             font-bold
-            first-letter:text-3xl
+            first-letter:text-5xl
 
             "> {preheading} </p>
 
@@ -42,20 +42,20 @@ export default function SectionHeader(
                     Brief_Aboutus_Heading
                     text-fadedBlack
                     font-PoppinsSemiBold
-                    text-5xl
+                    text-7xl
                     text-center
                     leading-normal
-                    -my-3
+                    -my-1
                     "> {heading} </h2>
                 :
                     <h2 className="
                     Brief_Aboutus_Heading
                     text-white
                     font-PoppinsSemiBold
-                    text-5xl
+                    text-7xl
                     text-center
                     leading-normal
-                    -my-3
+                    -my-1
                     "> {heading} </h2>
                 
             }
@@ -66,7 +66,7 @@ export default function SectionHeader(
             Mustache_Row
             ">
                 <div className="
-                min-w-36
+                min-w-56
                 min-h-0.5
                 bg-altAmber
                 rounded-full
@@ -77,7 +77,7 @@ export default function SectionHeader(
                 " src={mustache} alt="Mustache Image" />
 
                 <div className="
-                min-w-36
+                min-w-56
                 min-h-0.5
                 bg-altAmber
                 rounded-full

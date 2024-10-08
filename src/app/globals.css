@@ -28,6 +28,11 @@
     src: url("../fonts/poppins/Poppins-SemiBold.ttf");
 }
 
+@font-face {
+    font-family: "Prata";
+    src: url("../fonts/prata/Prata-Regular.ttf");
+}
+
 div {
     display: flex;
     justify-content: center;
