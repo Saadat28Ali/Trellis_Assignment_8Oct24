@@ -5,7 +5,7 @@ export default function Button({
     callback
 }: {
     text: string, 
-    callback?: (...args: any) => any
+    callback?: (...args) => void
 }) {
     return (
         <button className="

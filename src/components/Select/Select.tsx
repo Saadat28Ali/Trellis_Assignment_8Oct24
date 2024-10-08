@@ -28,7 +28,7 @@ export default function Select(
             >
                 {placeholder}
             </option>
-            {options.map((item: any, index: number) => {
+            {options.map((item: string, index: number) => {
                 return (
                     <option 
                     className="Select_Option"
