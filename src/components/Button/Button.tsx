@@ -5,7 +5,7 @@ export default function Button({
     callback
 }: {
     text: string, 
-    callback?: (...args) => void
+    callback?: () => void
 }) {
     return (
         <button className="
@@ -16,9 +16,9 @@ export default function Button({
         my-20
         text-3xl
         text-white
-        " onClick={(event) => {
+        " onClick={() => {
             if (callback !== undefined) {
-                callback(event);
+                callback();
             }
             // (callback !== undefined) ? callback(event) : {}
         }}>
