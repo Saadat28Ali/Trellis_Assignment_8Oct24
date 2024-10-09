@@ -1114,7 +1114,6 @@ export default function Home() {
               <FooterListHeader 
               preheading="" 
               heading="QUICK LINKS" 
-              footer 
               darkBg
               />
               <FooterListItem text="HOME" rotate={90}/>
@@ -1133,7 +1132,6 @@ export default function Home() {
               <FooterListHeader 
               preheading="" 
               heading="SERVICES" 
-              footer 
               darkBg
               />
               <FooterListItem text="HAIR" rotate={90}/>

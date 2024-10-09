@@ -15,15 +15,13 @@ export default function FooterListHeader(
         children, 
         darkBg, 
         leftAlign, 
-        footer
     }: 
     {
         preheading: string, 
         heading: string, 
         children?: Array<ReactElement> | string | undefined, 
         darkBg?: boolean, 
-        leftAlign?: boolean, 
-        footer?: Boolean
+        leftAlign?: boolean
     }
 ) {
     return (
