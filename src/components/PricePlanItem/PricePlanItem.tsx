@@ -14,8 +14,10 @@ export default function PricePlanItem(
         <div className="
         PricePlanItem
         flex-col
-
+        w-screen
+        md:w-full
         my-5
+        p-10
         ">
             <div className="
             PricePlanItem_Row

@@ -8,13 +8,14 @@ import Image from "next/image";
 import mustache from "../../public/icons/mustache.png";
 
 
-export default function SectionHeader(
+export default function FooterListHeader(
     {
         preheading, 
         heading, 
         children, 
         darkBg, 
         leftAlign, 
+        footer
     }: 
     {
         preheading: string, 
@@ -22,14 +23,15 @@ export default function SectionHeader(
         children?: Array<ReactElement> | string | undefined, 
         darkBg?: boolean, 
         leftAlign?: boolean, 
+        footer?: Boolean
     }
 ) {
     return (
-        <div className={"SectionHeader flex-col " + ((leftAlign) ? "items-start" : "")}>
+        <div className={"FooterListHeader flex-col " + ((leftAlign) ? "items-start" : "")}>
             <p
             className="
             text-mainAmber
-            text-4xl
+            text-2xl
             font-Roboto
             font-bold
             first-letter:text-5xl
@@ -42,20 +44,20 @@ export default function SectionHeader(
                     Brief_Aboutus_Heading
                     text-fadedBlack
                     font-PoppinsSemiBold
-                    text-7xl
+                    text-2xl
                     text-center
                     leading-normal
-                    -my-1
+                    -my-4
                     "> {heading} </h2>
                 :
                     <h2 className="
                     Brief_Aboutus_Heading
                     text-white
                     font-PoppinsSemiBold
-                    text-7xl
+                    text-2xl
                     text-center
                     leading-normal
-                    -my-1
+                    -my-4
                     "> {heading} </h2>
                 
             }
@@ -66,7 +68,7 @@ export default function SectionHeader(
             Mustache_Row
             ">
                 <div className="
-                min-w-56
+                min-w-10
                 min-h-0.5
                 bg-altAmber
                 rounded-full
@@ -77,7 +79,7 @@ export default function SectionHeader(
                 " src={mustache} alt="Mustache Image" />
 
                 <div className="
-                min-w-56
+                min-w-10
                 min-h-0.5
                 bg-altAmber
                 rounded-full
