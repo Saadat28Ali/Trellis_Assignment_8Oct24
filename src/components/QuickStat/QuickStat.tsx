@@ -22,7 +22,7 @@ export default function QuickStat(
             <h1 className="
             QuickStat_Heading
             font-PoppinsSemiBold
-            text-7xl
+            text-5xl
             "> {heading} </h1>
 
             <h2 className="
