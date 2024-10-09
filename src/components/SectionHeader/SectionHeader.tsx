@@ -29,11 +29,11 @@ export default function SectionHeader(
             <p
             className="
             text-mainAmber
-            text-4xl
+            text-2xl
             font-Roboto
             font-bold
-            first-letter:text-5xl
-
+            first-letter:text-3xl
+            mx-10
             "> {preheading} </p>
 
             {
@@ -42,20 +42,22 @@ export default function SectionHeader(
                     Brief_Aboutus_Heading
                     text-fadedBlack
                     font-PoppinsSemiBold
-                    text-7xl
+                    text-5xl
                     text-center
                     leading-normal
                     -my-1
+                    mx-10
                     "> {heading} </h2>
                 :
                     <h2 className="
                     Brief_Aboutus_Heading
                     text-white
                     font-PoppinsSemiBold
-                    text-7xl
+                    text-5xl
                     text-center
                     leading-normal
                     -my-1
+                    mx-10
                     "> {heading} </h2>
                 
             }

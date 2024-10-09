@@ -1,3 +1,5 @@
+"use client"
+
 // Component imports
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import TextInput from "@/components/TextInput/TextInput";
@@ -32,12 +34,20 @@ export default function ContactForm() {
             grow
             my-10
             ">
-                <SectionHeader
-                preheading="CONTACT" 
-                heading="Get In Touch"
-                darkBg
-                leftAlign
-                />
+                <div className="
+                justify-start
+                w-full
+                h-full
+                px-16
+                ">
+                    <SectionHeader
+                    preheading="CONTACT" 
+                    heading="Get In Touch"
+                    darkBg
+                    leftAlign={window.innerWidth > 768}
+                    />
+                </div>
+                
                 <p className="
                 font-Roboto
                 text-white

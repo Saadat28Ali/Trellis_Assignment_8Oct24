@@ -17,8 +17,9 @@ export default function NavbarSocialLink(
         mx-2
         ">
             <Image src={image} alt={(text)? text: "social"} style={{
-                width: 30, 
-                height: 30, 
+                width: "2em", 
+                height: "2em", 
+                objectFit: "contain", 
                 marginRight: "0 5 0 5", 
             }} />
             <p className="

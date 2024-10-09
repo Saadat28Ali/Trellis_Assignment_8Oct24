@@ -115,9 +115,13 @@ export default function Footer() {
             font-PoppinsSemiBold
             w-screen
             lg:w-4/12
-            items-start
+            
             justify-evenly
             gap-20
+            lg:flex-row
+            lg:items-start
+            flex-col
+            items-center
             ">
               
               <div className="

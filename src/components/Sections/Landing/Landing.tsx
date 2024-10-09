@@ -50,7 +50,7 @@ export default function Landing() {
             items-center
             min-h-12
             w-screen
-            sticky
+            md:sticky
             z-10
             top-0
             flex-col
@@ -61,7 +61,8 @@ export default function Landing() {
                 Landing_Navbar_Socials
                 w-screen
                 p-2
-                justify-between
+                flex-wrap
+                md:justify-between
                 ">
                     <div className="
                     Landing_Navbar_Socials_Left
@@ -87,6 +88,9 @@ export default function Landing() {
                 items-center
                 min-h-[inherit]
                 my-5
+                md:flex-row
+                flex-col
+                gap-10
                 " 
                 > 
                     <Link 

@@ -25,6 +25,8 @@ export default function Appointment() {
             text-4xl
             text-mainAmber
             my-10
+            mx-10
+            text-center
             "> BEST BARBERSHOP IN THE CITY  </p>
             
             <h1 className="

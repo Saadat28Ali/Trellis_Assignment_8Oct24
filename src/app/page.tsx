@@ -1,7 +1,13 @@
+import dynamic from "next/dynamic";
+
 import Landing from "@/components/Sections/Landing/Landing";
 import BriefAboutUs from "@/components/Sections/BriefAboutUs/BriefAboutUs";
 import Services from "@/components/Sections/Services/Services";
-import ContactForm from "@/components/Sections/ContactForm/ContactForm";
+
+const ContactForm = dynamic(() => import("@/components/Sections/ContactForm/ContactForm"), {
+  ssr: false
+});
+// import ContactForm from "@/components/Sections/ContactForm/ContactForm";
 import QuickStats from "@/components/Sections/QuickStats/QuickStats";
 import Team from "@/components/Sections/Team/Team";
 import Testimonials from "@/components/Sections/Testimonials/Testimonials";
