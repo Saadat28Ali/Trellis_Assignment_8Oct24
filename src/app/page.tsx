@@ -1,4 +1,3 @@
-// Section component imports
 import Landing from "@/components/Sections/Landing/Landing";
 import BriefAboutUs from "@/components/Sections/BriefAboutUs/BriefAboutUs";
 import Services from "@/components/Sections/Services/Services";

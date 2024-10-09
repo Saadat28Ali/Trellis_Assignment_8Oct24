@@ -3,6 +3,7 @@ import Image from "next/image";
 
 // Asset imports
 import navbarLogo from "@/public/logos/navbar/navbarlogo_1.png"
+import logoOrnament from "@/public/logos/navbar/logoornament.png";
 import phoneIcon_2 from  "@/public/icons/phone_2.png";
 import mailIcon_2 from "@/public/icons/mail_2.png";
 import locationIcon from "@/public/icons/location.png";
@@ -31,8 +32,8 @@ export default function Footer() {
           Footer_Row
           flex-col
           items-center
-          lg:flex-row
-          lg:items-start
+          xl:flex-row
+          xl:items-start
           gap-20
           w-screen
           "> 
@@ -42,12 +43,22 @@ export default function Footer() {
             lg:w-4/12
             flex-col
             ">
-              
-              <Image src={navbarLogo} alt="Logo" 
-              style={{
-                width: "300px", 
-                height: "auto"
-              }} />
+              <div className="Logo">
+                <Image src={logoOrnament} alt="logoOrnament"
+                style={{
+                    width: "300px", 
+                    height: "auto",
+                    position: "relative",
+                    filter: "saturate(0) brightness(2)", 
+                    top: -5, 
+                }} />
+                <Image src={navbarLogo} alt="Logo" 
+                style={{
+                    width: "300px", 
+                    height: "auto",
+                    position: "absolute", 
+                }} />
+              </div>
               
               <p className="
               font-Poppins

@@ -5,16 +5,22 @@ import Image from "next/image";
 // Asset imports --------------------------------------------------
 
 // Navbar
-import navbarLogo from "@/public/logos/navbar/navbarlogo_1.png"
+import navbarLogo from "@/public/logos/navbar/navbarlogo_1.png";
+import phoneIcon from "@/public/icons/phone.png";
+import mailIcon from "@/public/icons/mail.png";
+import facebookIcon from "@/public/icons/facebook.png";
+import twitterIcon from "@/public/icons/twitter.png";
+import globeIcon from "@/public/icons/globe.png";
+import youtubeIcon from "@/public/icons/youtube.png";
 
 // ----------------------------------------------------------------
 
 // Component imports
 import Button from "@/components/Button/Button";
+import NavbarSocialLink from "@/components/NavbarSocialLink/NavbarSocialLink";
 
 
 export default function Landing() {
-      {/* Landing */}
     return (
         <div className="
         Landing
@@ -40,56 +46,93 @@ export default function Landing() {
             bg-black
             bg-opacity-40
 
-            justify-evenly
+            justify-start
             items-center
-            min-h-24
+            min-h-12
             w-screen
             sticky
             z-10
             top-0
+            flex-col
+            p-5
             ">
-            <Link 
-            className="
-            text-2xl
-            "
-            href="/"> Home </Link>
-
-            <Link 
-            className="
-            text-2xl
-            "
-            href="/aboutus"> About us </Link>
             
-            <button 
-            className="
-            text-2xl
-            "
-            > Services </button>
+                <div className="
+                Landing_Navbar_Socials
+                w-screen
+                p-2
+                justify-between
+                ">
+                    <div className="
+                    Landing_Navbar_Socials_Left
+                    ">
+                        <NavbarSocialLink image={phoneIcon} text="+123456789" />
+                        <NavbarSocialLink image={mailIcon} text="barberz.123@info.com" />
+                    </div>
 
-            <Image 
-            className="
-            text-2xl
-            "
-            src={navbarLogo} width={211} height={54} alt="logo" />
+                    <div className="
+                    Landing_Navbar_Socials_Right
+                    ">
+                        <NavbarSocialLink image={facebookIcon} />
+                        <NavbarSocialLink image={twitterIcon} />
+                        <NavbarSocialLink image={globeIcon} />
+                        <NavbarSocialLink image={youtubeIcon} />
+                    </div>
+                </div>
+            
+                <div className="
+                Navlinks
+                w-screen
+                justify-evenly
+                items-center
+                min-h-[inherit]
+                my-5
+                " 
+                > 
+                    <Link 
+                    className="
+                    text-2xl
+                    "
+                    href="/"> Home </Link>
 
-            <Link 
-            className="
-            text-2xl
-            "
-            href="/team"> Team </Link>
+                    <Link 
+                    className="
+                    text-2xl
+                    "
+                    href="/aboutus"> About us </Link>
+                    
+                    <button 
+                    className="
+                    text-2xl
+                    "
+                    > Services </button>
 
-            <Link 
-            className="
-            text-2xl
-            "
-            href="/booking"> Booking </Link>
+                    <Image 
+                    className="
+                    text-2xl
+                    "
+                    src={navbarLogo} width={211} height={54} alt="logo" />
 
-            <Link 
-            className="
-            text-2xl
-            "
-            href="/contactus"> Contact Us </Link>
+                    <Link 
+                    className="
+                    text-2xl
+                    "
+                    href="/team"> Team </Link>
 
+                    <Link 
+                    className="
+                    text-2xl
+                    "
+                    href="/booking"> Booking </Link>
+
+                    <Link 
+                    className="
+                    text-2xl
+                    "
+                    href="/contactus"> Contact Us </Link>
+    
+                </div>
+            
             </div>
 
             {/* Landing area text */}
